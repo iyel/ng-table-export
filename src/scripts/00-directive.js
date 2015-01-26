@@ -87,7 +87,7 @@ angular.module('ngTableExport', [])
              */
             generate: function(event, filename) {
 
-              var table = scope.$parent.tableParams,
+              var table = scope.params,
                 settings = table.settings(),
                 cnt = table.count(),
                 total = settings.total;

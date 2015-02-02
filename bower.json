@@ -1,13 +1,24 @@
 {
   "name": "ng-table-export",
-  "version": "0.1.0",
-  "main": [
-    "ng-table-export.js"
+  "version": "0.0.4",
+  "homepage": "https://github.com/iyel/ng-table-export",
+  "authors": [
+    "iyel <ilyatrueone@gmail.com>"
   ],
+  "description": "Export to CSV format for ng-table",
+  "main": "./dist/ng-table-export.min.js",
+  "keywords": [
+    "ng-table",
+    "ng-table",
+    "export"
+  ],
+  "license": "New BSD License",
+  "private": true,
   "ignore": [
-    "src"
-  ],
-  "dependencies": {
-    "angular": ">=1.2.0-rc.2"
-  }
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

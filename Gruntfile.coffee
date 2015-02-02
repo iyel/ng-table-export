@@ -4,8 +4,8 @@ path = require 'path'
 module.exports = (grunt) ->
     grunt.initConfig
         cmpnt: grunt.file.readJSON('bower.json'),
-        banner: '/*! ngTableExport v<%= cmpnt.version %> by Vitalii Savchuk(esvit666@gmail.com) - ' +
-                    'https://github.com/esvit/ng-table-export - New BSD License */\n',
+        banner: '/*! ngTableExport v<%= cmpnt.version %> by iyel (https://github.com/iyel/) - ' +
+                    'https://github.com/iyel/ng-table-export - New BSD License */\n',
             
         # Deletes built file and temp directories.
         clean:
@@ -19,19 +19,19 @@ module.exports = (grunt) ->
         uglify:
             # concat js files before minification
             js:
-                src: ['ng-table-export.src.js']
-                dest: 'ng-table-export.js'
+                src: ['./dist/ng-table-export.js']
+                dest: './dist/ng-table-export.min.js'
                 options:
                   banner: '<%= banner %>'
                   sourceMap: (fileName) ->
-                    fileName.replace /\.js$/, '.map'
+                    fileName +='.map'
         concat:
             # concat js files before minification
             js:
                 src: [
                     'src/scripts/*.js'
                 ]
-                dest: 'ng-table-export.src.js'
+                dest: './dist/ng-table-export.js'
 
     grunt.loadNpmTasks 'grunt-contrib-clean'
     grunt.loadNpmTasks 'grunt-contrib-copy'
